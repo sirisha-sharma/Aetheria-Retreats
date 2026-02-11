@@ -56,7 +56,7 @@ export default async function RetreatDetailPage({
 
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.3em] text-white/50">
-              {retreat.tags.map((tag) => (
+              {retreat.tags.map((tag: string) => (
                 <span key={tag} className="rounded-full border border-white/10 px-3 py-1">
                   {tag}
                 </span>
