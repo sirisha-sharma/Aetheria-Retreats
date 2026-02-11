@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 async function getRetreat(slug: string) {
   await connectDB();
-  const retreat = await Retreat.findOne({ slug }).lean();
+  const retreat = await Retreat.findOne({ slug }).lean<any>();
   if (!retreat) return null;
   return {
     id: retreat._id.toString(),
