@@ -2,14 +2,14 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import BookingForm from "@/components/BookingForm";
 import connectDB from "@/lib/db";
-import Retreat from "@/models/Retreat";
+import Retreat, { type RetreatData } from "@/models/Retreat";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 async function getRetreat(slug: string) {
   await connectDB();
-  const retreat = await Retreat.findOne({ slug }).lean<any>();
+  const retreat = await Retreat.findOne({ slug }).lean<RetreatData>();
   if (!retreat) return null;
   return {
     id: retreat._id.toString(),

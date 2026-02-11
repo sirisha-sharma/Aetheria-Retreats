@@ -1,4 +1,22 @@
-import mongoose, { Schema, models } from "mongoose";
+import mongoose, { Schema, models, type Types } from "mongoose";
+
+export type RetreatData = {
+  _id: Types.ObjectId;
+  title: string;
+  slug: string;
+  location: string;
+  country: string;
+  pricePerNight: number;
+  durationDays: number;
+  capacity: number;
+  summary: string;
+  heroImage: string;
+  gallery: string[];
+  tags: string[];
+  highlights: string[];
+  host: Types.ObjectId;
+  status: "live" | "draft";
+};
 
 const RetreatSchema = new Schema(
   {
