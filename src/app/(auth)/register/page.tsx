@@ -43,7 +43,7 @@ export default function RegisterPage() {
         <p className="text-xs uppercase tracking-[0.4em] text-white/50">Join Aetheria</p>
         <h1 className="font-display text-4xl text-mist">Create your host profile.</h1>
         <p className="text-white/60">
-          We're a small platform. Tell us about your space, your food, and the
+          We&apos;re a small platform. Tell us about your space, your food, and the
           kind of guests you love to host.
         </p>
       </div>
